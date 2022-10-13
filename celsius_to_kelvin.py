@@ -10,4 +10,14 @@ def celsius_to_kelvin(c,krest=273.15):
         return K
 
 
-celsius_to_kelvin(0)
+userInput = 0
+while True:
+    try:
+        userInput = float(input("Gib die Temperatur in Grad Celsius ein: "))
+    except ValueError:
+        print("wrong input only numbers!")
+        continue
+
+    else:
+        celsius_to_kelvin(userInput)
+        break
